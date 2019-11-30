@@ -1,0 +1,28 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+  function slowScroll(id) {
+    $('html, body').animate ({
+      scrollTop: $(id).offset().top
+    }, 500);
+  }
+
+  $(document).on("scroll", function () {
+    if($(window).scrollTop() === 0)
+      $("header").removeClass("fixed");
+    else  $("header").attr("class", "fixed");
+  })
+</script>
+<header>
+  <div id="logo" onclick="slowScroll('#top')">
+    <span>
+      DeLight
+  </span>
+</div>
+<div id="about">
+  <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+  <a href="#" title="Преимущества" onclick="slowScroll('#overview')">Преимущества</a>
+  <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+  <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">FAQ</a>
+</div>
+</header>
