@@ -54,3 +54,18 @@
     </article></a>
   </div>
 </div>
+<!-- Forms and Passwords validation. See .js -->
+<form action="" method="post" name="test" id="form">
+  <label for="name">Your name</label>
+  <input type="text" name="name" placeholder="Your name" id="name"><br>
+  <label for="password">Your password</label>
+  <input type="password" name="password" placeholder="Your password" id="password"><br>
+  <label for="Repassword">Password check</label>
+  <input type="password" name="Repassword" placeholder="Password check " id="Repassword"><br>
+    <span>Choose your gender</span>
+  <input type="radio" name="state" placeholder="Your state" id="Male" value="Male"><label for="Male">Man</label>
+  <input type="radio" name="state" placeholder="Your state" id="Female" value="Female"><label for="Female">Woman</label><br>
+  <label for="email">Your email:</label>
+  <input type="email" name="email" placeholder="Your email" id="email"><br>
+  <input type="button" onclick="valid(document.getElementById('form'))" value="Next step" name="submit">
+</form>
