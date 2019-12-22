@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" href="javascript.js"></script>
+  <title>Document</title>
+  <script>
+          // Function лучше писать в head
+      function buttonClick (button) {
+        //Alerts
+          alert("You pressed. The button has its name - " + button.name + ", and also value - " + button.value);
+      }
+      var counterCode = 0;
+      function counter (element) {
+        // Shows how many times the cursor was on element
+        /*  if (document.getElementById("spoon").onmouseover) {
+              counterCode++;
+          }
+          element.innerHTML = "На этот текст навелись " + counterCode + " раз" */
+
+          counterCode++;
+          element.innerHTML = "На этот текст навелись " + counterCode + " раз"
+      }
+      </script>
+      <script>
+        // Email and Password Validations
+
+    function valid (form) {
+      var fail = false;
+      var email = form.email.value
+      var name = form.name.value;
+      var password = form.password.value;
+      var Repassword = form.Repassword.value;
+      var state = form.state.value;
+      var adr_pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+      if (name == "" || name == " ") {
+        fail = "Вы не ввели своё имя";
+      } else if(password == ""){
+        fail = "Вы не ввели свой пароль";
+      }
+       else if(password != Repassword){
+        fail = "Пароли не совпадают";
+      }
+       else if(state == ""){
+        fail = "Укажите пол";
+      }
+       else if(adr_pattern.test(email) == false) {
+        fail = "Вы ввели свой email Неправильно";
+      }
+       else if (email.split('@').length - 1 == 0)  {
+        fail = "Вы ввели свой email Неправильно";
+      }
+      if (fail) {
+        alert(fail);
+      } else {
+        // REDIRECT
+        window.location = "https://google.com";
+      }
+    }
+  </script>
+  <script>
+    // Timer
+    var id = setInterval("myFunct_1()", 1000);
+    var counter_2 = 0;
+    function myFunct_1() {
+      counter_2++;
+      document.getElementById("counterP").innerHTML = counter_2;
+      if (counter_2 == 9) {
+        clearInterval(id) //Stops coding
+      }
+    }
+  </script>
+  <style>
+    #more {
+      margin-top: 2000px;
+      margin-bottom: 1000px;
+    }
+  </style>
+</head>
+<body onload="timer()">
+  Eboshit?
+  <noscript>
+    NO
+  </noscript><br>
+  <script type="text/javascript">
+    document.write("Hello World");
+    document.write("<br />Hello World <br />");
+    // Коммент в одну строчку
+    /*Коммент
+    в
+    N
+    строчек*/
+    var number = 21;
+    var string;
+    string = "Hello World ";
+    var floatNumber = 1.23;
+    document.write("Variable number = " + number + "<br />" + string + floatNumber + "<br />");
+    var isTrue;
+    isTrue = true;
+    var x;
+    var y;
+    var result;
+    x = 5;
+    y = 12;
+    result = x + y;
+    document.write(result + "<br />");
+    result *= x;
+    document.write(result + "<br />");
+    result++;
+    document.write(x + " + " + y + " = " + (x + y) + "<br />");
+    var str_1 = "12";
+    var str_2 = Number("24");
+    document.write(Number(str_1) + str_2 + "<br />");
+    var bool;
+    var z = 6;
+    var d = 7;
+    bool = z > d;
+    document.write(bool);
+    document.write("<br />")
+    document.write(10 + " % " + 7 + " = " + (10%7));
+  </script><br>
+  <script type="text/javascript">
+    var x = 6;
+    var y = 5;
+    var bool = false;
+    // != это НЕ РОВНО, как перечёркнутое РОВНО
+    // && is logical AND
+    // || is logical OR
+    if (x > y || bool == true)
+        document.write("x > y");
+      else if (x == y)
+        document.write("x = y");
+      else
+        document.write("x < y");
+
+      document.write("<br />");
+      var result = 5;
+      switch(result) {
+        case 1: document.write("result = 1"); break;
+        case 2: document.write("result = 2"); break;
+        case 3: document.write("result = 3"); break;
+        case 4: document.write("result = 4"); break;
+        default: document.write("result is wrong");
+      }
+      document.write("<br />");
+      x > y ? document.write("YES") : document.write("NO");
+  </script><br>
+  <script type="text/javascript"> //Циклы
+    //var i;
+    for(var i = 0; i <= 10; i++ ) {
+      if (i % 3 == 0 && i != 0) continue;
+      if (i == 8) break;
+      document.write (i + "<br />");
+    }
+    var x = 0;
+    //++ adds +1 to var
+    //Use += to add N to your var. Example:(x += 2) adds +2 to your var
+    while (x < 10) {
+      document.write(x + "<br />");
+      x += 2;
+    }
+    var y = 1000;
+    //Цикл "Do while" выполняется 100% как минимум один раз
+    do {
+      document.write("Srabotalo")
+    } while(y < 100);
+  </script>
+  <script type="text/javascript">
+    // Alarms
+    var person;
+    //alert("Hello, " + person);
+  /*  if(confirm("Are you sure?")) {
+      person = prompt("Hi, what's your name?");
+      alert("Hello, " + person);
+    } else {
+      alert("Person not sure");
+    } */
+  </script><br>
+  <script type="text/javascript">
+    //Массивы (Arrays)
+    //Массивы начинаются с нулевого элемента. Подсчёт идёт с 0. STR=0, 1.23=1...
+    var arr = new Array("str", 1.23, 7, false);
+
+    for(var i = 0; i < arr.length; i++) {
+      document.write(arr[i] + "<br />");
+    }
+    arr = new Array();
+    for(i = 0; i < 10; i++) {
+      arr[i] = i * 3;
+      document.write(arr[i] + "<br />");
+    }
+    var suma = 0;
+    for(i = 0; i < arr.length; i++) {
+      suma += arr[i];
+    }
+    document.write("Средняя равна = " + (suma / arr.length));
+  </script>
+  <script type="text/javascript">
+    //Многомерные Массивы
+    var arr_1 = new Array();
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+      var arr_1 = new Array();
+      var arr_2 = new Array();
+      var arr_3 = new Array();
+      for(var i = 0; i < 5; i++) arr_1[i] = i;
+      for(var i = 0; i < 10; i++) arr_2[i] = i;
+      for(var i = 0; i < 15; i++) arr_3[i] = i;
+
+      var arr = new Array(arr_1, arr_2, arr_3);
+
+      for(var x = 0; x < arr.length; x++) {
+          for(var j = 0; j < arr[x].length; j++) {
+              document.write(arr[x][j] + " ");
+          }
+          document.write("<br />")
+      }
+      </script>
+      <br>
+      <script>
+          var summ;
+          function print (lol) {
+              document.write("Hello World");
+          }
+          print();
+
+          function printInfo (lol) {
+              document.write(lol);
+          }
+          printInfo("<br />" + "Hi");
+          printInfo("<br />");
+          printInfo("World" + "<br />");
+
+          function count (x, y) {
+              summ = x + y;
+              printInfo(summ);
+          }
+          count (5, 7);
+      </script>
+      <br><br>
+      <script>
+          var global = 12;
+          var i = 10;
+
+          function test () {
+              global++;
+              var i = 5;
+          }
+
+          test();
+          document.write("Global = " + global + ", var i = " + i);
+      </script>
+      <!-- .getElementById and .innerHTML, это смена текста и само использование текста -->
+      <p id="myP">I am a paragraph.</p>
+
+<p>Click the button get the HTML content of the p element.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+var x = document.getElementById("myP").innerHTML;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+<input type="button" name="b" value="Click me" onclick="buttonClick (this)">
+<br>
+<span id="spoon" onmouseover="counter (this)">На этот текст навелись 0 раз</span>
+
+  <form action="" method="post" name="test" id="form">
+    <label for="name">Your name</label>
+    <input type="text" name="name" placeholder="Your name" id="name"><br>
+    <label for="password">Your password</label>
+    <input type="password" name="password" placeholder="Your password" id="password"><br>
+    <label for="Repassword">Password check</label>
+    <input type="password" name="Repassword" placeholder="Password check " id="Repassword"><br>
+      <span>Choose your gender</span>
+    <input type="radio" name="state" placeholder="Your state" id="Male" value="Male"><label for="Male">Man</label>
+    <input type="radio" name="state" placeholder="Your state" id="Female" value="Female"><label for="Female">Woman</label><br>
+    <label for="email">Your email:</label>
+    <input type="email" name="email" placeholder="Your email" id="email"><br>
+    <input type="button" onclick="valid(document.getElementById('form'))" value="Next step" name="submit">
+  </form>
+  Секунд прошло - <span id="counterP"></span><br>
+  Секунд прошло после загрузки страницы - <span id="counterP2"></span><br>
+  <script>
+    //Math
+    /*
+    var text = "Число PI - " + Math.PI;
+    text += "\nЧисло E - " + Math.E;
+    text += "\nМодуль -7 - " + Math.abs(-7);
+    text += "\nsin 0.3 - " + Math.sin(0.3);
+    text += "\nРандомное число - " + Math.random();
+    text += "\nРандомное число - " + Math.floor(Math.random() * 11);
+    alert(text); */
+  </script>
+  <script>
+    //Date
+    var date = new Date();
+    var month = date.getMonth() + 1;
+    text = "Год сейчас - " + date.getFullYear();
+    text += "\nМесяц - " + month;
+    text += "\nДень - " + date.getDay();
+    text += "\nЧасов - " + date.getHours();
+    text += "\nМинут - " + date.getMinutes();
+    text += "\nСекунд - " + date.getSeconds();
+    //alert(text);
+
+    var date = new Date(2017, 05, 04, 03, 55, 47);
+    date.setMinutes(11);
+    //alert(date);
+  </script>
+  <script>
+    var arr_5 = new Array (2, 3, 56, 12, 23, 590, 123, 2);
+    text = "Длина массива - " + arr_5.length;
+    text += "\nМассив состоит из - " + arr_5.join(", "); //.join задаёт, какие отступы будут между массивами. Тут будет запятая с пробелом
+    text += "\nСортировочный массив - " + (arr_5.sort()).join(", ");
+    //alert(text  );
+  </script>
+  <script>
+    var string_1 = "Небольшая Строка";
+    var text_1 = "Длина строки равна - " + string_1.length;
+    text_1 += "\nВся строка в верхнем регистре " + string_1.toUpperCase();
+    text_1 += "\nВся строка в lower регистре " + string_1.toLowerCase();
+    text_1 += "\nОбрезанная строка " + string_1.substring(1, 5);
+    text_1 += "\n3-й символ это " + string_1.charAt(3);
+    text_1 += "\n'Стро' начинается с индекса - " + string_1.indexOf("Стро");
+    //alert(text_1);
+  </script>
+  <script src="jquery.js">
+
+  </script>
+  <div id="up"></div>
+  <a href="javascript://0" onclick="slowScroll('#more')">Подробнее</a>
+  <div id="more">Больше информации | <a href="javascript://0" onclick="slowScroll('#up')">Наверх</a></div>
+  <script>
+    function slowScroll(id) {
+      var offset = 0;
+      $('html, body').animate ({
+        scrollTop: $(id).offset ().top - offset
+      }, 500);
+      return false;
+    }
+  </script>
+</body>
+</html>

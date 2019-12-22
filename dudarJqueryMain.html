@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="img/png" href="https://cdn4.iconfinder.com/data/icons/scripting-and-programming-languages/512/jquery-256.png">
+  <title>jQuer_stwo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    function valid() {
+      var state = $("input[name='sex']:checked").val();
+      if(!state) return $("#message").html("<font style='color:red'>Choose your sex *</font><br />"); //return то же самое, что и break в цикле. Если условие соблюдено, код дальше не читается
+      $("#message").hide();
+      alert(state);
+
+    if (state == "male")
+      $("#img").show();
+    }
+  </script>
+  <style>
+    .div_1 {
+background-color: #e07474;
+    }
+    .div_2 {
+background-color: #b7f5a2;
+    }
+  </style>
+
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+  <div id="test" onclick="$('#test').hide()">Hide</div>
+  <div class="test">Test 1</div>
+  <div class="test">Test 2</div>
+  <p class="test">Test 3</p>
+  <p class="test">Test 4</p>
+
+  <img src="1.jpg" alt="1" class="azaz">
+  <img src="2.jpg" alt="2" title="2" class="azaz">
+  <img src="3.jpg" alt="3" class="azaz">
+  <img src="4.jpg" alt="4" title="4">
+
+
+  <script type="text/javascript">
+    var str = "   ac a das     dsad a     b";
+    //alert(str);
+    //alert($.trim(str));//Убирает пробелы
+  </script>
+  <script type="text/javascript">
+    var test = $('div.test');
+    for (var i = 0; i < test.length; i++) {
+      test.get(i).style.color = "red";
+    }
+    setTimeout("$('p.test').get(0).style.color = 'green'", 2000); // 0 это первый элемент в массиве
+    //alert(test);
+    var test = $("div"); // Выбирает все теги div
+    //alert(test.length); // Показывает, сколько div'ов в документе
+    var img = $("img[title]"); // Показывает img с атр title
+    //alert (img.length);
+  </script>
+  <ul id="menu">
+    <li><a href="">Ссылка 1</a></li>
+    <li><a href="">Ссылка 2</a></li>
+    <li><a href="">Ссылка 3</a></li>
+    <li><a href="">Ссылка 4</a></li>
+    <li><a href="">Ссылка 5</a></li>
+  </ul>
+  <script type="text/javascript">
+    var link = $("#menu li a:first");
+    //alert (link.html());
+    link = $("#menu li a:eq(2)");
+    //alert(link.html());
+  </script>
+  <form class="" action="index.html" method="post" name=" form" id="form">
+    <label for="female">Женский</label>
+    <input type="radio" name="sex" value="female" id="female">
+    <label for="male">Мужской</label>
+    <input type="radio" name="sex" value="male" id="male"><br><br>
+    <span id="message"></span><br>
+    <input type="button" id="done" name="" value="Готово" onclick="return valid()">
+    <img src="1.jpg" alt="1" id="img" style="display:none" />
+  </form>
+  <img src="1.jpg" alt="Image"><br>
+  <img src="2.jpg"><br>
+  <img src="3.jpg"><br>
+  <img src="4.jpg" alt="Image"><br>
+  <script type="text/javascript">
+    $(":not(img[alt])").attr ("alt", "jQuery"); // Применяется к элементам без атрибута alt и добавляет им атрибут alt
+    //$("img").not("img[alt]"); // то же самое, что и сверху
+    var elements = $("img");
+    var text = "";
+    for (var i = 0; i < elements.length; i++) {
+      text += elements[i].src + "\n"; //существует также className
+      //alert(text);
+    }
+  </script>
+  <div id="div">Text</div>
+   <script type="text/javascript"> // Не впускает нас на сайт И присваивает class, упомянутый где-то раннее
+    /* var div = prompt("1 или 2?");
+    while (div != 1 && div != 2) {
+      //alert("Type 1 or 2");
+      div = prompt ("1 или 2?");
+    }
+    $("#div").attr("class", "div_" + div);
+
+    //alert($("#div").get(0).className); */
+  </script>
+
+  <script> //CSS в jQuery, в окне prompt вписываем значение высоты
+    $("#div").css("font-size", "3em");
+
+     $("#div").css("background-color", function() {
+      return "blue";
+     });
+
+      $("#div").css("width", "250px");
+
+      /* $("#div").css("height", function() {
+        var height = prompt("Enter the height")
+      return height + "px"; /*
+     });
+  </script>
+  <div id="div5" style="background-color: green">
+    Block
+    <p>Abzac</p>
+  </div>
+  <script type="text/javascript">
+    //alert($("#div5").html()); //выводит всё содержимое ВКЛЮЧАЯ теги
+    //alert($("#div5").text()); //выводит всё содержимое НЕ ПОКАЗЫВАЯ теги
+  </script>
+  <script> // Клонирование стилей и функция append
+    var block = $("#div5").clone();
+    block.html("<p>New Abzac</p>");
+    block.css("background-color", "red");
+    $('body').append(block);
+  </script>
+  <div id="div6"><p>Abzac</p></div>
+  <div id="div6_2"></div>
+  <img src="1.png" alt="2">
+  <img src="2.png" alt="3">
+  <img src="3.png" alt="4"><br>
+  <a href="">1</a>
+  <a href="">2</a>
+  <script> //Удаление и перемещение элементов
+    $("img").show();
+    $("div").append("<span> Sample text</span>"); // Поместить в ...
+    $("img").appendTo($('#div6_2')); // Переместить в ...
+    $("a").wrap("<p style='display:none'></p>"); // Обернуть в ... (В данном случае мы из тегов <a> делаем <p><a></a></p>)
+    $("#div6").remove();
+    $("#div6_2").empty();
+    $("#div6_2").append("<br />This is appended text")
+  </script>
+  <div id="div7">Blockkk</div>
+  <script>// Создание элементов
+    $("<p>A bit of text</p>").appendTo("#div7"); //Вставляет в конец тега
+    $("<p>A bit of text</p>").prependTo("#div7"); //Вставляет в начало тега
+    $("<p>Insert Before</p>").insertBefore("#div7");//Вставляет перед тегом
+    $("<p>Insert After</p>").insertAfter("#div7");//Вставляет после тега
+  </script>
+  <input type="text" name="text" id="text">
+  <input type="button" onclick="return val()">
+  <script type="text/javascript">
+    function val() {
+      var text = $("#text").val();
+
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+  <div style="height: 50px; width: 50px; background-color: red;"></div>
+  <div style="height: 50px; width: 50px; background-color: green;"></div>
+  <div style="height: 50px; width: 50px; background-color: blue;"></div>
+  <script type="text/javascript">
+  function incSize (event) { //ВАЖНО! Функция Number преобразовывает текст или значение чего-либо в ЧИСЛО, которое ПОТОМ можно как-либо использовать, например добавить к нему 50 или использовать значение в других функциях
+    var width = Number(event.target.style.width.substring(0, event.target.style.width.length - 2)) //substring обрезает текст (считает с начала, считает с конца)
+    event.target.style.width = (width + 5) + "px";
+    $(event.target).unbind(); // Убирает bind
+  }
+
+    $(document).ready(function () {
+      $("div").bind("click", incSize); // Создает событие, если соблюдено условие
+      $("<p>Координаты мышки при нажатии x = " + event.screenX + "Координаты y = " + event.screenY + "</p>").insertAfter("div:last");
+    });
+  </script>
+</body>
+</html>

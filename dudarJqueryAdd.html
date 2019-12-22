@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	  <script src="jquery.js"></script>
+	<script>
+	var x = 0;
+	function counter (element) {
+		if(x<=4) {
+		x++;
+		$(element).html("Lalka " + x)
+	} else {
+		return;
+	}
+	}
+	</script>
+	<script>
+			var x = 0;
+	function counter (element) {
+			if (x <= 4) {
+			x++;
+			element.innerHTML = "На этот текст навелись " + x + " раз";
+			} else {
+					element.innerHTML = "кто прочитал тот сдохнет";
+			}
+	}
+
+	</script>
+	<script>//REDIRECT
+			window.onload = function() {
+			//window.location.replace("http://drehe-das-rad.online/");
+}
+	</script>
+</head>
+<body>
+<span id="spoon" onmouseover="counter (this)">Lalka 0 </span>
+<div style="height: 50px; width: 50px; background-color: red;"></div>
+<div style="height: 50px; width: 50px; background-color: green;"></div>
+<div style="height: 50px; width: 50px; background-color: blue;"></div>
+<!-- <script type="text/javascript">
+function incSize (event) { //ВАЖНО! Функция Number преобразовывает текст или значение чего-либо в ЧИСЛО, которое ПОТОМ можно как-либо использовать, например добавить к нему 50 или использовать значение в других функциях
+	var width = Number(event.target.style.width.substring(0, event.target.style.width.length - 2)) //substring обрезает текст (считает с начала, считает с конца)
+	event.target.style.width = (width + 5) + "px";
+//	$(event.target).unbind(); // Убирает bind
+	$("<p>Координаты мышки при нажатии x = " + event.screenX + "Координаты y = " + event.screenY + "</p>").insertAfter("div:last");
+}
+
+	$(document).ready(function () {
+		$("div").bind("click", incSize); // Создает событие, если соблюдено условие
+		$(document).on("click", "p", function() {
+			$("<p>Some TEXT</p>").insertAfter("p");
+		});
+
+	});
+</script> -->
+<a href="#" id="hide"  onclick="return false">Hide comments</a>
+<a href="#" id="show" style="display:none;" onclick="return false">Show comments</a><br>
+<div id="comments">
+    <p>Comment 1</p>
+    <p>Comment 2</p>
+    <p>Comment 3</p>
+    <form id="form" name="form" style="display:none" onsubmit="return false" action="#" method="POST">
+        <textarea name="comment" id="textarea" cols="30" rows="10"></textarea><br>
+        <input type="submit" name="send" value="Add comentary" id="done">
+    </form>
+    <a href="#" onclick="return false" id="add_comment">Add Coment</a><br><br>
+    <script>// Анимация
+        $(document).ready (function () {
+            function hideComments () {
+                $("#hide").hide();
+                $("#show").show();
+                $("#comments").slideUp(1000);
+            }
+            function showComments () {
+                $("#hide").show();
+                $("#show").hide();
+                $("#comments").slideDown(1000);
+            }
+            $("#hide").bind("click", hideComments); //bind отличается от on тем, что on влияет также на элементы, которые были созданы после загрузки страницы (нп. ваш коммент и т.д.)
+            $("#show").bind("click", showComments);
+        });
+    </script>
+    <script> //Добавление коммментариев js
+            $(document).ready(function () {
+                 $(document).on("click", "#add_comment", function () {
+                    var form = $("form[name='form']");
+                    form.css("display", "block");
+                    $("#add_comment").replaceWith(form); //ВАЖНО заменяет один элемент другим
+
+                });
+                $(document).on("click", "input[name='send']", function () {
+                    var comment = $("textarea[name='comment']").val();
+                    alert("Thank you for your comment");
+                    $("<p>" + comment + "</p>").prependTo("div#comments");
+                    $(textarea).val("");
+                });
+            });
+        </script>
+</div>
+
+
+<p>
+	<img src="https://farm8.static.flickr.com/7926/45822355335_568ea80e3e_b.jpg" alt="Picture" title="Picture" id="img" width="200px">
+</p>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#img").bind("click", function (event) {
+			$(event.target).parent().css("text-align", "center");
+			$(event.target).animate({
+				width: $(event.target).width() * 4, //ВАЖНО! тут ставим запятые, а не ; 
+				height: $(event.target).height() * 4,
+			}, 3000);
+		});
+	});
+</script>
+</body>
+</html>
