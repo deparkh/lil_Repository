@@ -1,0 +1,365 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-weight: lighter;
+  font-family: "Segoe UI";
+}
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  color: #333;
+  line-height: 135%;
+}
+a {
+  color: #ff6200;
+  text-decoration: none;
+  transition: all.6s;
+}
+a:hover {
+  color: #80c4ff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:active {
+  color: #8ce4a6;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Selection Block */
+::selection {background: #f58b8b; color: #fff;}
+header, footer {
+  width: 98%;
+  background-color: #f7f7f7;;
+  float: left;
+}
+
+footer {
+  border-top: 2px solid silver;
+  margin-top: 10px;
+  padding: 1%;
+  padding-bottom: 2%;
+}
+
+/* Шапка */
+header {
+  border-bottom: 2px solid silver;
+  padding: 1%;
+}
+
+#logo {
+  font-size: 2em;
+  font-family: Helvetica;
+  font-weight: 100;
+}
+.contact {
+  font-size: 1.5em;
+    font-family: "Segoe UI";
+    margin-left: 20px;
+}
+/*input, [type=text]*/.field {
+  border-radius: 5px;
+  border: 2px solid silver;
+  padding: 5px;
+  margin-left: 20px;
+  background-color: #f7f7f7;
+}
+.right {
+
+  float: right;
+}
+.left {
+  float: left;
+}
+.right img {
+  width: 5%;
+  float: left;
+  margin-right: 5px;
+}
+#page-wrap::after {
+    content: "";
+    display: block;
+}
+footer, #page-wrap {
+  height: 10px;
+}
+#page-wrap {
+  height: 92%;
+  margin-bottom: -10px;
+}
+.clear {
+  clear: both;
+}
+
+/* Меню Разделы */
+
+#menu {
+  font-family: "Segoe UI";
+  color: #666;
+  font-size: 1.8em;
+  font-weight: 400;
+}
+#menu hr {
+  width: 500px;
+  max-width: 100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+hr {
+  display: block;
+  border: 0px;
+  height: 1px;
+  border-top: 1px solid #ccc;
+  padding: 0;
+}
+#menuHrefs {
+  padding: 7px;
+}
+#menuHrefs a {
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 1.5em;
+}
+#menuHrefs a:hover {
+  background-color: #ececec;
+  color: #2e43ff;
+}
+/* Стили для формы */
+
+form {
+  width: 60%;
+  margin-left: 20%;
+  float: left;
+}
+form input {
+  border-radius: 5px;
+  border: 2px solid silver;
+  padding: 5px;
+  background-color: #fafafa;
+  float: left;
+  clear: both;
+  margin-bottom: 10px;
+  width: 40%;
+}
+form input:focus, form textarea:focus {
+    border: 2px solid silver;
+}
+form label {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+form textarea {
+  width: 60%;
+  float: left;
+  clear: both;
+  background-color: #fafafa;
+  border: 2px solid silver;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.7em;
+}
+form #send {
+  float: left;
+  padding: 10px;
+  background-color: #f37a7a;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #fff;
+}
+form #send:hover {
+  background-color: #bdf37a;
+}
+/* Стили для панели О нас */
+
+#about_us {
+  width: 100%;
+  float: left;
+  background-color: #fafafa;
+  border-radius: 5px;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  padding: 1%;
+}
+#about_us p {
+  font-size: 1.5em;
+}
+/* Три панели в центре */
+
+#wrapper {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+}
+#wrapper #articles {
+  float: left;
+  width: 80%;
+  margin-left: 10%;
+}
+#wrapper #articles article {
+  float: left;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #fafafa;
+  min-height: 500px;
+}
+@media (min-width: 900px) {
+#wrapper #articles article {
+  width: 31.33333%;
+  margin-right: 2%;
+}
+}
+@media (max-width: 899px) and (min-width: 700px) {
+#wrapper #articles article {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 10px;
+}
+}
+@media (max-width: 699px) {
+#wrapper #articles article {
+  width: 100%;
+  margin-bottom: 10px;
+}
+}
+#wrapper #articles article img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px 5px 0px 0px;
+}
+#wrapper #articles article h2 {
+  width: 90%;
+  margin-top: 5%;
+  margin-left: 5%;
+  font-weight: 400;
+  font-size: 1.7em;
+
+}
+#wrapper #articles article p {
+  padding-top: 5%;
+  margin-left: 5%;
+  width: 80%;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+.simple {
+  transition: all.6s;
+  color: black;
+}
+.simple:hover {
+  color: #ff6200;
+}
+/*Статьи*/
+#half_articles {
+  width: 50%;
+  float: left;
+  margin-left: 25%;
+}
+#half_articles p {
+  text-align: justify;
+  font-size: 1.7em;
+  line-height: 120%;
+}
+#half_articles h1 {
+  padding: 20px;
+
+}
+#half_articles img {
+  width: 75%;
+  height: 500px;
+  padding: 5px;
+}
+/* Central Block */
+
+/*В margin и padding сначала оступ по высоте,
+потом по ширине, 20% 0px (высота)(ширина)*/
+
+#main_soc_block {
+width: 100%;
+padding: 2% 0px;
+border-top: 2px solid silver;
+border-bottom: 2px solid silver;
+margin: 20px 0px;
+float: left;
+background: url(../images/fon.jpg) repeat-x center;
+height: 200px;
+background-attachment: fixed;
+}
+#main_soc_block_in {
+text-align: center;
+padding: 1%;
+height: 100px;
+border-radius: 7px;
+width: 500px;
+line-height: 150%;
+color: white;
+max-width: 100%;
+box-sizing: border-box;
+margin-top: 10px;
+}
+#main_soc_block_in a{
+float: left;
+padding: 5px;
+margin-top: 15px;
+background-color: #ff6200;
+border-radius: 6px;
+color: #fff;
+margin-left: 27%;
+margin-top: 5px;
+}
+
+/*The same but CSS Grid*/
+/*
+#grids {
+  width: 100%;
+}
+#grid {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: center;
+  height: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(600px; auto);
+  grid-gap: 1em;
+  padding: 10px;
+  border-radius: 10px;
+}
+.undergrid {
+  background-color: #f7f7f7;
+  border: 1px solid silver;
+  border-radius: 5px;
+  min-height: 450px;
+}
+.undergrid img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px 5px 0px 0px;
+}
+.undergrid h2 {
+  width: 90%;
+  margin-top: 5%;
+  margin-left: 5%;
+  font-weight: 400;
+  font-size: 1.7em;
+  color: black;
+}
+.undergrid p {
+  padding-top: 5%;
+  margin-left: 5%;
+  width: 80%;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  color: black;
+} */
