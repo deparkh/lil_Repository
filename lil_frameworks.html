@@ -264,3 +264,7 @@ float: right;
   font-weight: normal;
 }
 </style>
+<!-- .htaccess settings (Apache settings) -->
+AddDefaultCharset UTF-8
+RewriteRule ^about?$ about.php [NC, L],// <!-- Renames about.php to about in browser -->
+ErrorDocument 404  /404.php <!-- If user have this error, redirect to this page -->
