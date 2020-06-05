@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="shortcut icon" type="img/png" href="img/icon.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    function faceButtonClick() {
+      window.location = "https://www.bbc.com/news/world-asia-china-51305526#";
+    }
+    function shareButtonClick() {
+      window.location = "https://www.bbc.com/news/world-asia-china-51305526#share-tools";
+    }
+    function twitButtonClick() {
+      window.location = "https://www.bbc.com/news/world-asia-china-51305526#";
+    }
+    function whatsButtonClick() {
+      window.location = "https://www.bbc.com/news/world-asia-china-51305526#";
+    }
+    function buttonRedirect() {
+      window.location = "https://www.bbc.com/news/topics/cyz0z8w0ydwt/coronavirus-outbreak";
+    }
+    function videoHover() {
+      $(".videopng").hide();
+      $(".videohoverpng").show();
+    }
+    function videoHoverOut() {
+      $(".videopng").show();
+      $(".videohoverpng").hide();
+    }
+    function newsRedirect() {
+      window.location="https://www.bbc.com/news"
+    }
+    function menuIn() {
+      $("#menuVisible").hide();
+      $("#menuHidden").hide();
+      $("#closebtn").show();
+      $(".menudiv").show();
+      $("section").hide();
+    }
+    function menuOut() {
+      $("#menuVisible").show();
+      $("#menuHidden").hide();
+      $("#closebtn").hide();
+      $(".menudiv").hide();
+      $("section").show();
+    }
+  </script>
+  <title>How will Harry and Meghan earn money? - BBC News</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header1 container">
+    <ul class="knopki1  d-flex">
+      <li><a href="https://www.bbc.com/"><img src="img/1.png" alt="" class="logoimg"></a></li>
+      <li><div class="loginimg botborderblue"><a href="https://session.bbc.com/session?ptrt=https%3A%2F%2Fwww.bbc.com%2Fnews%2Fworld-asia-china-51305526%23&context=news&userOrigin=NEWS_GNL"><img src="img/2.png" alt="" class="loginimg botborderblue"></a></div></li>
+      <li class="pd5 botborder"><a href="https://www.bbc.com/">Home</a></li>
+      <li class="pd5 botborderred"><a href="https://www.bbc.com/news">News</a></li>
+      <li class="pd5 botborder"><a href="">More <img src="img/4.png" alt="" class="moreimg"></a></li>
+      <li><a href="https://search.bbc.co.uk/search?scope=all"><img src="img/3.png" alt="" class="searchimg"></a></li>
+    </ul>
+  </header>
+  <nav class="newsNav">
+    <div class="container"><img src="img/news.png" alt="" class="newsImg" onclick="newsRedirect()">
+    <img src="img/menu.png" alt="" class="menuImg" onmouseover="menuButton()" onclick="menuIn()" id="menuVisible">
+    <img src="img/menuHover.png" alt="" class="menuImgHover" onmouseout="menuButtonOut()" id="menuHidden">
+    <img src="img/closebtn.png" alt="" id="closebtn" onclick="menuOut()" class="menuImgIn">
+
+      </div>
+      <div class="menudiv">
+        <a href="https://www.bbc.com/news">Home</a><hr class="menuhr">
+        <a href="https://www.bbc.com/news/video_and_audio/headlines">Video</a><hr class="menuhr">
+        <a href="https://www.bbc.com/news/world">World</a><img src="img/menuarrow.png" alt=""><br>
+          <div class="menugray">
+            <a href="https://www.bbc.com/news/world">World Home</a><hr class="menuhr">
+            <a href="https://www.bbc.com/news/world/africa">Africa</a><hr class="menuhr">
+            <a href="https://www.bbc.com/news/world/asia" style="border-left:4px solid red;">Asia</a><hr class="menuhr">
+            <a href="https://www.bbc.com/news/world/australia">Australia</a><hr class="menuhr">
+            <a href="https://www.bbc.com/news/world/europe">Europe</a><hr class="menuhr">
+            <a href="https://www.bbc.com/news/world/latin_america">Latin America</a><hr class="menuhr">
+            <a href="https://www.bbc.com/news/world/middle_east">Middle East</a><hr class="menuhr">
+            <a href="https://www.bbc.com/news/world/us_and_canada">US & Canada</a>
+          </div>
+        <a href="https://www.bbc.com/news/uk"><br> &nbsp&nbsp UK</a><img src="img/menuarrow2.png" class="menuarrow2" alt="">
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/business">Business</a><img src="img/menuarrow2.png" class="menuarrow2" alt="">
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/technology">Tech</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/science_and_environment">Science</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/stories">Stories</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/entertainment_and_arts">Entertaiment & Arts</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/health">Health</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/world_radio_and_tv">World News TV</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/in_pictures">In Pictures</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/realitycheck">Reality Check</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/newsbeat">Newsbeat</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/special_reports">Special Reports</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/explainers">Explainers</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/the_reporters">The Reporters</a>
+        <hr class="menuhr">
+        <a href="https://www.bbc.com/news/have_your_say">Have You Say</a>
+  </div>
+  <div class="redmenu">
+    <ul class="redul d-flex container">
+      <li class="pd5 menuborder"><a href="https://www.bbc.com/news">Home <br><br></a></li>
+      <li class="pd5 menuborder"><a href="https://www.bbc.com/news/video_and_audio/headlines">Video</a></li>
+      <li class="pd5 menuborder menuborderwhite"><a href="https://www.bbc.com/news/world">World</a></li>
+      <li class="pd5 menuborder"><a href="https://www.bbc.com/news/uk">UK</a></li>
+      <li class="pd5 menuborder"><a href="https://www.bbc.com/news/business">Business</a></li>
+      <li class="pd5 menuborder"><a href="https://www.bbc.com/news/technology">Tech</a></li>
+      <li class="pd5 menuborder"><a href="https://www.bbc.com/news/science_and_environment">Science</a></li>
+      <li class="pd5 menuborder"><a href="https://www.bbc.com/news/stories">Stories</a></li>
+      <li class="pd5 menuborder"><a href="https://www.bbc.com/news/entertainment_and_arts">Entertaiment</a></li>
+      <li class="pd5 menuborder"><a href="https://www.bbc.com/news/health">Health</a></li>
+      <li class="pd5 menuborder"><a href="https://www.bbc.com/news/world_radio_and_tv">World News</a></li>
+      <li class="pd5 menuborder"><a href="">More</a></li>
+    </ul>
+  </div>
+  </nav>
+
+
+
+
+  <aside class="raside">
+    <div class="graysquare">
+      <span class="articleh3 margin5">Top Stories</span><br><br>
+      <a href="https://www.bbc.com/news/world-asia-51345855">UK leaves the European Union</a><br>
+
+      <br>
+      <a href="https://www.bbc.com/news/uk-scotland-scotland-politics-51342714">Trump set for acquittal after witness vote fails</a><br>
+      <br>
+      <a href="https://www.bbc.com/news/uk-51345776">US bars foreigners who recently visited China</a>
+      <br>
+    </div>
+    <div class="rfeatures">
+      <span class="articleh3 margin5">Features</span><br><br>
+      <img src="img/aside1.png" alt="">
+      <a href="https://www.bbc.com/news/world-asia-51321661">The real people living in a 'Parasite' basement</a><br><br>
+      <img src="img/aside2.png" alt="">
+      <a href="https://www.bbc.com/news/av/world-us-canada-51330442/we-voted-for-obama-then-trump">‘We voted for Obama, then Trump’</a><br><br>
+      <img src="img/aside3.png" alt="https://www.bbc.co.uk/bbcthree/article/41d1b43e-d39b-450e-be74-e37b14a5e265">
+      <a href="https://www.bbc.com/news/world-latin-america-51285893">The 'gritty' truth about your cosmetics</a><br><br>
+      <img src="img/aside4.png" alt="">
+      <a href="https://www.bbc.com/news/world-latin-america-51285893">Loved to death: The battle to save the queen conch</a><br><br>
+      <img src="img/aside5.png" alt="">
+      <a href="https://www.bbc.com/news/av/entertainment-arts-51329843/black-filmmakers-on-diversity-craft-and-awards">Black filmmakers on diversity, craft and awards</a><br><br>
+      <img src="img/aside6.png" alt="">
+      <a href="https://www.bbc.com/news/world-us-canada-51273719">A simple guide to US primaries and caucuses</a><br><br>
+      <img src="img/aside7.png" alt="">
+      <a href="https://www.bbc.com/news/world-africa-51284576">A tourist-spot church turned refugee camp</a><br><br>
+      <img src="img/aside8.png" alt="">
+      <a href="https://www.bbc.com/news/business-51214832">'I wasn't allowed to buy my burrito with cash'</a><br><br>
+      <img src="img/aside9.png" alt="">
+      <a href="https://ichef.bbci.co.uk/news/270/cpsprodpb/12DC8/production/_110665277_yakuzawomen_clean.mp4.00_03_30_10.still001.jpg">The secret life of Yakuza women</a>
+    </div>
+    <div class="graysquareaside margintop">
+      <span class="articleh3">Elsewhere on BBC</span>
+      <br>
+      <br>
+      <div class="chinadivs">
+        <img src="img/gray1.png" alt="" class="flLeft imgbot">
+        <pre class="pregray bright"><span style="color:#212529; font-weight:bold;">&nbspLyrics quiz</span>
+&nbspHave you been getting
+&nbspthese songs wrong?</pre>
+      </div>
+      <div class="chinadivs">
+        <img src="img/gray2.png" alt="" class="flLeft imgbot">
+        <pre class="pregray bright"><span style="color:#212529; font-weight:bold;">&nbspFeeling hot</span>
+&nbspWhat happens to your
+&nbspin extreme heat?</pre>
+      </div>
+    </div>
+    <div class="smallsquare"><span class="articleh3">Most Read</span></div>
+    <div class="mostreadaside">
+      <div class="mostreadin"><a href=""><p>&nbsp</p>Kobe Bryant helicopter firm was not allowed to fly in fog</a></div>
+      <span class="numbers">1</span>
+      <hr>
+      <div class="mostreadin"><a href="">Brexit: UK leaves the European Union</a></div>
+      <span class="numbers">2</span>
+      <hr>
+      <div class="mostreadin"><a href="">Coronavirus: US and Australia close borders to Chinese arrivals</a></div>
+      <span class="numbers">3</span>
+      <hr>
+      <div class="mostreadin"><a href="">Coronavirus: 'Good progress' in hunt for those at risk</a></div>
+      <span class="numbers">4</span>
+      <hr>
+      <div class="mostreadin"><a href="">WhatsApp to stop working on millions of phones</a></div>
+      <span class="numbers">5</span>
+      <hr>
+      <div class="mostreadin"><a href="">Brexit: What will change after Friday, 31 January?</a></div>
+      <span class="numbers">6</span>
+      <hr>
+      <div class="mostreadin"><a href="">Canning Town freezer bodies: Murder charges over Henriett Szucs and Mihrican Mustafa deaths</a></div>
+      <span class="numbers">7</span>
+      <hr>
+      <div class="mostreadin"><a href="">Trump impeachment: Failed witnesses vote paves way for acquittal</a></div>
+      <span class="numbers">8</span>
+      <hr>
+      <div class="mostreadin"><a href="">Madonna: Will Gompertz reviews the star's show at the London Palladium ★★★★★</a></div>
+      <span class="numbers">9</span>
+      <hr>
+      <div class="mostreadin"><a href="">Trump impeachment trial: What acquittal would mean for 2020 election</a></div>
+      <span class="numbers">10</span>
+      <hr>
+    </div>
+  </aside>
+
+
+
+  <!-- Main section -->
+  <section>
+    <article class="mainArticle">
+      <span class="mainText"><br>This site was especially made by GRID Studio <br>How will Harry and Meghan earn money?</span><br><br>
+      <img src="img/clock.png" alt="" class="clockimg"> <span class="clocktext">30 January 2020</span>
+      <img src="img/share.png" alt="" class="shareimg fl-right socbuttons" onclick="shareButtonClick()">
+      <img src="img/twit.png" alt="" class="twitimg fl-right socbuttons" onclick="twitButtonClick()">
+      <img src="img/whats.png" alt="" class="whatsimg fl-right socbuttons" onclick="whatsButtonClick()">
+      <img src="img/face.png" alt="" class="faceimg fl-right socbuttons" onclick="faceButtonClick()">
+      <div class="divButton">United Kingdom News</div>
+      <hr>
+      <!-- Text section -->
+      <!-- <iframe width="100%" height="400" frameborder="0" src="https://www.bbc.com/news/av/embed/p081rvhm/51305526"></iframe> -->
+      <article class="upperArticle">
+        <img src="img/й.jpg" alt="" class="img100"><br><br>
+      <p class="articleText"><b>Working nine-to-five in a humdrum job is unlikely to be the path chosen by the Duke and Duchess of Sussex, but as it stands it is not known how exactly the couple will earn a living.</b></p>
+      <p>In their bombshell statement on January 8, Harry and Meghan announced their intention to “work to become financially independent” while also “fully” supporting the Queen.</p>
+      <p>They said they would continue to “collaborate” with the monarch, the Prince of Wales and the Duke of Cambridge – but it was decided that a half-in/half-out model whereby the couple would gain financial independence while also serving the Queen was not possible.
+</p>
+<p>After talks with the royal family, Harry and Meghan announced that they will stop carrying out royal duties from the spring and no longer use the title HRH.</p>
+<p>Now, with their new-found freedom, they only have to wait for the offers to come rolling in, so what will the Sussexes do next?</p>
+<p>There has been much speculation about the millions Harry and Meghan will be able to make through lucrative contracts, with suggestions ranging from acting, film or television, to brand partnerships, to public speaking, and even book deals.
+</p>
+<p>BBC royal correspondent Jonny Dymond says the general rule has always been that if you are a working royal, you don't really do paid work, especially if it could cause a conflict of interest.</p>
+<p>The Earl and Countess of Wessex faced such allegations when they tried to run a TV company and PR firm, respectively.</p>
+<p>Nearly any employment they might embark on would open the duke and duchess up to criticism that they were exploiting or monetising the royal brand, our correspondent adds.</p>
+<p>According to an anonymous source from The BBC, Prince Harry has found the perfect way out of this situation, namely, he has been using the BF trading platform for more than two months.</p>
+<p>We decided to conduct an editorial investigation, but what kind of trading platform is it and how does it work? For this purpose, we invited the editor of the publication <b><u>Inside Bitcoins</u></b> Patrick Webber.</p>
+<p style="font-size:18px"><b><a href="">Bitcoin Freedom Review: Scam or Legit? The Results Revealed!</a></b></p>
+        </article>
+
+
+        <span class="articleh2 sharing">Share this story</span><span class="smallText"> About sharing</span><br>
+        <img src="img/botsoc1.png" alt="" class="botsocimg" href="">
+        <img src="img/botsoc2.png" alt="" class="botsocimg">
+        <img src="img/botsoc3.png" alt="" class="botsocimg">
+        <img src="img/botsoc4.png" alt="" class="botsocimg">
+        <img src="img/botsoc5.png" alt="" class="botsocimg">
+        <img src="img/botsoc6.png" alt="" class="botsocimg">
+        <img src="img/botsoc7.png" alt="" class="botsocimg">
+        <img src="img/line.png" alt="" class="lineimg">
+        <span class="articleh2 sharing">More on this story</span>
+
+        <hr>
+        <div class="linkCollector">
+          <a href="https://www.bbc.com/news/business-51276322">
+            <div class="linkDiv">
+              <b>Coronavirus: Technology giants join China shutdown </b>
+              <pre class="prefont">30 January 2020</pre>
+            </div>
+          </a>
+          <a href="https://www.bbc.com/news/uk-51292590">
+            <div class="linkDiv">
+              <b>Coronavirus: Britons on Wuhan flights to be quarantined </b>
+              <pre class="prefont">29 January 2020</pre>
+            </div>
+          </a>
+          <a href="https://www.bbc.com/news/world-australia-51289897">
+            <div class="linkDiv">
+              <b>Coronavirus: Australian scientists first to recreate virus outside China </b>
+              <pre class="prefont">28 January 2020</pre>
+            </div>
+          </a>
+          <a href="https://www.bbc.com/news/world-asia-china-51202254">
+            <div class="linkDiv">
+              <b>Wuhan: The London-sized city where the virus began </b>
+              <pre class="prefont">23 January <2020></2020></pre>
+            </div>
+          </a>
+          <a href="https://www.bbc.com/news/world-asia-china-51290312">
+            <div class="linkDiv">
+              <b>Coronavirus: Australia plans island quarantine as foreigners leave Wuhan </b>
+              <pre class="prefont">29 January 2020</pre>
+            </div>
+          </a>
+          <a href="https://www.bbc.com/news/uk-51288672">
+            <div class="linkDiv">
+              <b>Coronavirus: Foreign Office warns against 'all but essential travel' to China </b>
+              <pre class="prefont">28 January 2020</pre>
+            </div>
+          </a>
+        </div>
+
+      </article>
+
+
+
+
+
+
+
+
+
+      <article class="container downArticle">
+        <span class="articleh3">China </span><img src="img/redarrow.png" alt="" class="redimg">
+        <div class="chinadivs">
+          <img src="img/china1.png" alt="" class="flLeft imgbot">
+          <p class="ml5">&nbspCoronavirus declared &nbspglobal &nbsphealth emergency</p>
+          <img src="img/clock.png" alt="" class="clockbot flLeft"><pre class="prefont bright"> 31 January 2020 | <a href="" class="reda">World</a></pre>
+        </div>
+        <div class="chinadivs">
+          <img src="img/china2.png" alt="" class="flLeft imgbot">
+          <p class="">&nbspUS advises against all &nbsptravel &nbspto China over virus</p>
+          <img src="img/clock.png" alt="" class="clockbot flLeft"><pre class="prefont bright"> 31 January 2020 | <a href="" class="reda">US</a></pre>
+        </div>
+        <div class="chinadivs">
+          <img src="img/china3.png" alt="" class="flLeft imgbot">
+          <p class="">&nbspTrump official: Coronavirus &nbspcould boost US jobs</p>
+          <img src="img/clock.png" alt="" class="clockbot flLeft"><pre class="prefont bright"> 31 January 2020 | <a href="" class="reda">Business</a></pre>
+        </div>
+        <span class="articleh3">More Videos from the BBC</span><br>
+        <span class="smallText" style="color:gray">Recommended by Outbrain</span><br>
+        <div class="videodivs">
+          <img src="img/video1.png" alt="">
+          <p>A danger in a medieval mystery</p>
+        </div>
+        <div class="videodivs">
+          <img src="img/video2.png" alt="">
+          <p>'Very clear the palace is very upset'</p>
+        </div>
+        <div class="videodivs">
+          <img src="img/video3.png" alt="">
+          <p>Is this the world's most dangerous island?</p>
+        </div>
+        <div class="videodivs">
+          <img src="img/video4.png" alt="">
+          <p>Moment baby girl's new hearing aids are turned on</p>
+        </div>
+        <div class="videodivs">
+          <img src="img/video5.png" alt="">
+          <p>The murdered priest with a decades-long secret</p>
+        </div>
+        <div class="videodivs">
+          <img src="img/video6.png" alt="">
+          <p>Zuckerberg family allows rare access inside home</p>
+        </div>
+        <span class="articleh3">Elsewhere on BBC</span><br>
+        <span class="smallText" style="color:gray">Recommended by Outbrain</span><br>
+        <div class="videodivs">
+          <img src="img/else1.png" alt="">
+          <p class="pred">BBC.com</p>
+          <p>BTS:Huawei uncovered.</p>
+        </div>
+        <div class="videodivs">
+          <img src="img/else2.png" alt="">
+          <p class="pred">BBC Travel</p>
+          <p>Is it the most authentic Korean barbecue?</p>
+        </div>
+        <div class="videodivs">
+          <img src="img/else3.png" alt="">
+          <p class="pred">BBC News</p>
+          <p>'Freedom at a price' seals hard Megxit</p>
+        </div>
+        <div class="videodivs">
+          <img src="img/else4.png" alt="">
+          <p class="pred">BBC Travel</p>
+          <p>A uniquely Japanese take on nostalgia</p>
+        </div>
+        <div class="videodivs">
+          <img src="img/else5.png" alt="">
+          <p class="pred">BBC News</p>
+          <p>Deli owner died after kosher meat mix-up</p>
+        </div>
+        <div class="videodivs">
+          <img src="img/else6.png" alt="">
+          <p class="pred">BBC Culture</p>
+          <p>How could the Oscars ignore these brilliant women directors?</p>
+        </div><br>
+        <div class="graysquare">
+          <span class="articleh3 margin5">Top Stories</span><br><br>
+          <a href="">UK leaves the European Union</a><br>
+          <br>
+          <a href="">Trump set for acquittal after witness vote fails</a><br>
+          <br>
+          <a href="">US bars foreigners who recently visited China</a>
+          <br>
+        </div>
+        <div class="features">
+          <span class="articleh3">Features</span><br>
+          <br>
+          <div class="videodivs">
+            <img src="img/fea1.png" alt="">
+            <p>What now after Brexit? The EU view</p>
+          </div>
+          <div class="videodivs">
+            <img src="img/fea2.png" alt="">
+            <p>A test that reveals the future: Would you want to know?</p>
+          </div>
+          <div class="videodivs">
+            <img src="img/fea3.png" alt="">
+            <p>'Baby's toy saved me from an avalanche'</p>
+          </div>
+          <div class="videodivs">
+            <img src="img/fea4.png" alt="">
+            <p>Burying the voice of Tunisia's revolution</p>
+          </div>
+          <div class="videodivs">
+            <img src="img/fea5.png" alt="">
+            <p>What acquittal would mean for 2020 election</p>
+          </div>
+          <div class="videodivs">
+            <img src="img/fea6.png" alt="">
+            <p>The UK has left the EU: What happens next?</p>
+          </div>
+        </div>
+        <div class="graysquare margintop">
+          <span class="articleh3">Elsewhere on BBC</span>
+          <br>
+          <br>
+          <div class="chinadivs">
+            <img src="img/gray1.png" alt="" class="flLeft imgbot">
+            <pre class="pregray bright"><span style="color:#212529; font-weight:bold;">&nbspLyrics quiz</span>
+&nbspHave you been getting
+ these songs wrong?</pre>
+          </div>
+          <div class="chinadivs">
+            <img src="img/gray2.png" alt="" class="flLeft imgbot">
+            <pre class="pregray bright"><span style="color:#212529; font-weight:bold;">&nbspFeeling hot</span>
+&nbspWhat happens to your
+ in extreme heat?</pre>
+          </div>
+        </div>
+        <div class="smallsquare"><span class="articleh3">Most Read</span></div>
+        <div class="mostread">
+          <div class="mostreadin"><a href=""><p>&nbsp</p>Kobe Bryant helicopter firm was not allowed to fly in fog</a></div>
+          <span class="numbers">1</span>
+          <hr>
+          <div class="mostreadin"><a href="">Brexit: UK leaves the European Union</a></div>
+          <span class="numbers">2</span>
+          <hr>
+          <div class="mostreadin"><a href="">Coronavirus: US and Australia close borders to Chinese arrivals</a></div>
+          <span class="numbers">3</span>
+          <hr>
+          <div class="mostreadin"><a href="">Coronavirus: 'Good progress' in hunt for those at risk</a></div>
+          <span class="numbers">4</span>
+          <hr>
+          <div class="mostreadin"><a href="">WhatsApp to stop working on millions of phones</a></div>
+          <span class="numbers">5</span>
+          <hr>
+          <div class="mostreadin"><a href="">Brexit: What will change after Friday, 31 January?</a></div>
+          <span class="numbers">6</span>
+          <hr>
+          <div class="mostreadin"><a href="">Canning Town freezer bodies: Murder charges over Henriett Szucs and Mihrican Mustafa deaths</a></div>
+          <span class="numbers">7</span>
+          <hr>
+          <div class="mostreadin"><a href="">Trump impeachment: Failed witnesses vote paves way for acquittal</a></div>
+          <span class="numbers">8</span>
+          <hr>
+          <div class="mostreadin"><a href="">Madonna: Will Gompertz reviews the star's show at the London Palladium ★★★★★</a></div>
+          <span class="numbers">9</span>
+          <hr>
+          <div class="mostreadin"><a href="">Trump impeachment trial: What acquittal would mean for 2020 election</a></div>
+          <span class="numbers">10</span>
+          <hr>
+        </div>
+        <div class="trust"><img src="img/bot1.png" alt=""><a href="" class="articleh3"> Why you can trust BBC News</a></span></div>
+        <div class="sections"><span class="articleh3"><b>Sections</b></span><img src="img/botarrow.png" alt=""></div>
+    </article>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="darksquare">
+      <span class="darkspan">BBC News Services</span><br>
+      <img src="img/bot2.png" alt="">
+      <a href="">&nbspOn your mobile</a><br>
+      <img src="img/bot3.png" alt="">
+      <a href="">&nbspOn smart speakers</a><br>
+      <img src="img/bot4.png" alt="">
+      <a href="">&nbspGet news alerts</a><br>
+      <img src="img/bot5.png" alt="">
+      <a href="">&nbspContact BBC News</a><br>
+    </div>
+    <div class="explore">
+      <span style="font-size:1.6em; font-weight:bold;">Explore the BBC</span><br>
+      <nav class="footnav bold"><a href="">Home</a><br>
+      <a href="">Sport</a><br>
+      <a href="">Worklife</a><br>
+      <a href="">Future</a><br>
+      <a href="">Music</a><br>
+      <a href="">Weather</a></nav>
+      <nav class="footnav bold borderleft"><a href="">News</a><br>
+      <a href="">Reel</a><br>
+      <a href="">Travel</a><br>
+      <a href="">Culture</a><br>
+      <a href="">TV</a><br>
+      <a href="">Sounds</a></nav>
+      <hr class="hrbot">
+      <nav class="footnav">
+      <a href="">Terms of Use</a><br>
+      <a href="">Privacy Policy</a><br>
+      <a href="">Accessibility Help</a><br>
+      <a href="">Contact the BBC</a><br>
+      <a href="">Get Personalised Newsletters</a><br>
+      <a href="">Advertise with us</a><br>
+      <a href="">AdChoices / Do Not Sell My Info</a></nav>
+      <nav class="footnav">
+      <a href="">About the BBC</a><br>
+      <a href="">Cookies</a><br>
+      <a href="">Parental Guidance</a><br></nav>
+      <p><br><br><b>Copyright © 2020 GRID Studio.</b>The BBC is not responsible for the content of external sites. <a href="">Read about our approach to external linking.</a></p>
+    </div>
+  </footer>
+</body>
+</html>
