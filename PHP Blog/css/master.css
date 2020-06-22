@@ -1,0 +1,21 @@
+p{
+  font-size: 1.3em;
+}
+.card_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2em;
+  margin: 2em;
+}
+.bg_green{
+  background-color: #d6ffda;
+}
+.bg_yellow{
+  background-color: #faffc1;
+}
+.bg_redy{
+  background-color: #ffd8d8;
+}
+.bg_blue{
+  background-color: #d8e7ff;
+}
