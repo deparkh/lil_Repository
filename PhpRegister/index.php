@@ -1,34 +1,49 @@
-<?include "db.php"?>
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang = "ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <!-- Bootstrap JS and CSS Files connection -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <!-- jQuery connection -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- CSS connection -->
-  <link rel="stylesheet" href="css/master.css">
-  <!-- Shortcut icon -->
-  <link rel="shortcut icon" type="img/png" href="img/icon.png">
-
+  <title>Форма регистрации</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container"><br>
-  <?if (isset($_SESSION['logged_user']) ) : ?>
-  Authorized! :) <br>
-  Hello, <?echo $_SESSION['logged_user']->login;?><br>
-  <a href="logout.php">Log out</a>
-  <?else:?>
-  <a href="login.php">Login</a><br>
-  <a href="signup.php">Sign Up</a>
-  <?endif;?>
-</div>
+  <div class="container mt-4">
+    <?php
+     if (empty($_COOKIE['user'])):
+      ?>
+      <div class="row">
+         <div class="col">
+           <h1>Форма регистрации</h1>
+           <form  action="php/check.php" method="post">
+             <input type="text" class="form-control" name="login" value="" id="login" placeholder="Введите ваш логин"><br>
+
+             <input type="text" class="form-control" name="name" value="" id="name" placeholder="Введите ваше имя"><br>
+
+             <input type="password" class="form-control" name="pass" value="" id="pass" placeholder="Введите ваш пароль"><br>
+
+             <button class="btn btn-success"  type ="submit" >Регистрация</button>
+           </form>
+         </div>
+
+
+         <div class="col">
+           <h1>Форма авторизации</h1>
+           <form  action="php/auth.php" method="post">
+             <input type="text" class="form-control" name="login" value="" id="login" placeholder="Введите ваш логин"><br>
+
+             <input type="password" class="form-control" name="pass" value="" id="pass" placeholder="Введите ваш пароль"><br>
+
+             <button class="btn btn-success"  type ="submit" >Авторизация</button>
+           </form>
+         </div>
+           <?php else:?>
+             <p>Привет  <?php echo $_COOKIE['user'] ?>.Чтобы выйти нажмите  <a href="php/exit.php">здесь</a> </p>
+         <?php endif; ?>
+
+      </div>
+  </div>
+
 </body>
 </html>

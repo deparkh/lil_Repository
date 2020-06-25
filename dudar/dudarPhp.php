@@ -9,6 +9,8 @@
   }
 
 ?>
+<!-- Быстрый вывод echo -->
+<?=$_POST['name']?>
 <?//Работа с Cookie и Сессиями
   session_start();
   $num = (isset($_COOKIE["num"])) ? $_COOKIE["num"] : 0;
