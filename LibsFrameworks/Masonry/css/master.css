@@ -1,0 +1,23 @@
+/* Non RESPOSIVE version */
+/* .grid-sizer{
+  width: 100%;
+}
+.grid-item>img {
+  width: 359px;
+  float: left;
+  background: #ffffff;
+  border: 1px solid silver;
+  border-radius: 10px;
+  margin: 10px 0px;
+} */
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item { width: 25%; }
+.grid-item>img{
+  width: 95%;
+  float: left;
+  background: #ffffff;
+  border: 1px solid silver;
+  border-radius: 10px;
+  margin: 8px 0px;
+}
