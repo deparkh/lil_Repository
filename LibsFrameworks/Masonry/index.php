@@ -8,12 +8,14 @@
   <title>Masonry Grid Layout</title>
   <!-- jquery import -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- Masonry import -->
+
+  <!-- Masonry import (Requires jQuery) -->
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-  <!-- imagesLoaded import(REQUIRED!!!) -->
+  <!-- imagesLoaded import(REQUIRED!!!)(Watch CSS) -->
   <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
-  <link rel="shortcut icon" type="img/png" href="img/icon.png">
   <link rel="stylesheet" href="css/master.css">
+
+  <link rel="shortcut icon" type="img/png" href="img/icon.png">
   <!-- Masonry RESPOSIVE script, also copy CSS. Non RESPOSIVE version https://masonry.desandro.com/ -->
   <script type="text/javascript">
   // Masonry activating
