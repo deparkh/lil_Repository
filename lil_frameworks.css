@@ -1,81 +1,8 @@
-/*Transparent header when moving; upward when clicked+animation*/
-
-.fixed {
-  z-index: 5000;
-  background-color: #fff;
-  border-bottom: 1px solid silver;
-}
-header.fixed #logo {
-  color: #343434;
-}
-.fixed #about a {
-  color: #343434;
-}
-.fixed #about a:hover {
-  color: #7c7c7c;
-}
-/* Main block with articles */
-#wrapper {
-  float: left;
-  width: 100%;
-  margin-top: 20px;
-}
-#wrapper #articles {
-  float: left;
-  width: 80%;
-  margin-left: 10%;
-}
-#wrapper #articles article {
-  float: left;
-  border: 1px solid silver;
-  box-sizing: border-box;
-  border-radius: 5px;
-  background-color: #fafafa;
-  min-height: 500px;
-}
-@media (min-width: 900px) {
-#wrapper #articles article {
-  width: 31.33333%;
-  margin-right: 2%;
-}
-}
-@media (max-width: 899px) and (min-width: 700px) {
-#wrapper #articles article {
-  width: 80%;
-  margin-left: 10%;
-  margin-bottom: 10px;
-}
-}
-@media (max-width: 699px) {
-#wrapper #articles article {
-  width: 100%;
-  margin-bottom: 10px;
-}
-}
-#wrapper #articles article img {
-  width: 100%;
-  height: 200px;
-  border-radius: 5px 5px 0px 0px;
-}
-#wrapper #articles article h2 {
-  width: 90%;
-  margin-top: 5%;
-  margin-left: 5%;
-  font-weight: 400;
-  font-size: 1.7em;
-
-}
-#wrapper #articles article p {
-  padding-top: 5%;
-  margin-left: 5%;
-  width: 80%;
-  font-size: 1.3em;
-  line-height: 1.3em;
-}
-.simple {
+/* Transitions */
+a{
   transition: all.6s;
-  color: black;
 }
-.simple:hover {
-  color: #ff6200;
+a:hover{
+  transition: 0.5s;
+  text-decoration: none;
 }

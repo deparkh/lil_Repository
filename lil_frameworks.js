@@ -1,41 +1,4 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> //JS Download
 //Functions are working better in <head> element, not <body>
-//Fomrs and Passwords validion
-<script>
-function valid (form) {
-var fail = false;
-var email = form.email.value
-var name = form.name.value;
-var password = form.password.value;
-var Repassword = form.Repassword.value;
-var state = form.state.value;
-var adr_pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-
-if (name == "" || name == " ") {
-  fail = "Вы не ввели своё имя";
-} else if(password == ""){
-  fail = "Вы не ввели свой пароль";
-}
- else if(password != Repassword){
-  fail = "Пароли не совпадают";
-}
- else if(state == ""){
-  fail = "Укажите пол";
-}
- else if(adr_pattern.test(email) == false) {
-  fail = "Вы ввели свой email Неправильно";
-}
- else if (email.split('@').length - 1 == 0)  {
-  fail = "Вы ввели свой email Неправильно";
-}
-if (fail) {
-  alert(fail);
-} else {
-  // REDIRECT
-  window.location = "https://google.com";
-}
-}
-</script>
   // Timer
 <script>
   var id = setInterval("myFunct_1()", 1000);

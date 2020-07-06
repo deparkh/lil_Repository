@@ -9,13 +9,13 @@
   mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);//Correct errors displaying
   $connection = mysqli_connect($host, $user, $password, $database)//Connection to the DB Query
 ?>
+<!-- jQuery connection -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Bootstrap JS and CSS Files connection -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<!-- jQuery connection -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- CSS connection -->
 <link rel="stylesheet" href="css/master.css">
 <!-- Shortcut icon -->
@@ -26,6 +26,16 @@
 <meta name="description" content="">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="shortcut icon" type="img/png" href="img/icon.png">
+
+<!-- Slick connection (don't forget to put SLICK folder into your website folder) -->
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<!-- Masonry import (Requires jQuery) -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<!-- imagesLoaded import(REQUIRED!!!)(Watch CSS) -->
+<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
 
 <!-- Media queries -->
 <style media="screen">
@@ -61,126 +71,7 @@
   :focus:-moz-placeholder           {opacity:0;}/* Firefox 18- */
   :focus:-ms-input-placeholder      {opacity:0;}/* IE */
 </style>
-<!-- Main block with articles -->
-<div id="wrapper">
-  <div id="articles">
-    <a href="" title="" class="simple"><article>
-      <img src="images/news1.jpg" alt="Изображение" title="Изображение1">
-      <h2></h2>
-      <p></p></a>
-    </article>
-    <article>
-      <a href="" title="" class="simple">
-      <img src="images/news2.jpg" alt="Изображение" title="Изображение2">
-      <h2></h2>
-      <p></p>
-    </article></a>
-    <article>
-      <a href="" title="" class="simple">
-      <img src="images/news3.jpg" alt="Изображение" title="Изображение3">
-      <h2></h2>
-      <p></p>
-    </article></a>
-  </div>
-</div>
-<style>
-  #wrapper {
-    float: left;
-    width: 100%;
-    margin-top: 20px;
-  }
-  #wrapper #articles {
-    float: left;
-    width: 80%;
-    margin-left: 10%;
-  }
-  #wrapper #articles article {
-    float: left;
-    border: 1px solid silver;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background-color: #fafafa;
-    min-height: 500px;
-  }
-  @media (max-width: 1600px) and (min-width: 1401px) {
-    .wrapper {
-      height: 1600px;
-    }
-  }
-  @media (max-width: 1400px) and (min-width:1201px) {
-    .wrapper {
-      height: 1675px;
-    }
-  }
-  @media (max-width: 1200px) and (min-width:1000px) {
-    .wrapper {
-      height: 1840px;
-    }
-  }
-  @media (max-width: 999px) and (min-width:651px) {
-    .wrapper {
-      width: 100%;
-      height: 1750px;
-    }
-  }
-  @media (max-width: 650px) and (min-width: 350px) {
-    .wrapper {
-      width: 98%;
-      height: 2920px;
-      margin-top: 0;
-      margin-right: 0;
-      margin-left: 0;
-    }
-    }
-  @media (max-width: 349px) {
-    .wrapper {
-      width: 98%;
-      height: 3070px;
-      margin-top: 0;
-      margin-right: 0;
-      margin-left: 0;
-    }
-  }
-  @media (max-width: 1600px) and (min-width: 1401px) {
-    .wrapper {
-      height: 1600px;
-    }
-  }
-  @media (max-width: 1400px) and (min-width:1201px) {
-    .wrapper {
-      height: 1675px;
-    }
-  }
-  @media (max-width: 1200px) and (min-width:1000px) {
-    .wrapper {
-      height: 1840px;
-    }
-  }
-  @media (max-width: 999px) and (min-width:651px) {
-    .wrapper {
-      width: 100%;
-      height: 1750px;
-    }
-  }
-  @media (max-width: 650px) and (min-width: 350px) {
-    .wrapper {
-      width: 98%;
-      height: 2920px;
-      margin-top: 0;
-      margin-right: 0;
-      margin-left: 0;
-    }
-    }
-  @media (max-width: 349px) {
-    .wrapper {
-      width: 98%;
-      height: 3070px;
-      margin-top: 0;
-      margin-right: 0;
-      margin-left: 0;
-    }
-  }
-</style>
+
 <!-- Forms and Passwords validation. See .js -->
 <form action="" method="post" name="test" id="form">
   <label for="name">Your name</label>
@@ -196,6 +87,41 @@
   <input type="email" name="email" placeholder="Your email" id="email"><br>
   <input type="button" onclick="valid(document.getElementById('form'))" value="Next step" name="submit">
 </form>
+<script>
+function valid (form) {
+var fail = false;
+var email = form.email.value
+var name = form.name.value;
+var password = form.password.value;
+var Repassword = form.Repassword.value;
+var state = form.state.value;
+var adr_pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+if (name == "" || name == " ") {
+  fail = "Вы не ввели своё имя";
+} else if(password == ""){
+  fail = "Вы не ввели свой пароль";
+}
+ else if(password != Repassword){
+  fail = "Пароли не совпадают";
+}
+ else if(state == ""){
+  fail = "Укажите пол";
+}
+ else if(adr_pattern.test(email) == false) {
+  fail = "Вы ввели свой email Неправильно";
+}
+ else if (email.split('@').length - 1 == 0)  {
+  fail = "Вы ввели свой email Неправильно";
+}
+if (fail) {
+  alert(fail);
+} else {
+  // REDIRECT
+  window.location = "https://google.com";
+}
+}
+</script>
 <!-- Cookies Closeable Alert -->
 <script type="text/javascript">
   var removableDiv = document.getElementById("cookieOutside");
@@ -245,5 +171,5 @@ float: right;
 </style>
 <!-- .htaccess settings (Apache settings) -->
 AddDefaultCharset UTF-8
-RewriteRule ^about?$ about.php [NC, L],// <!-- Renames about.php to about in browser -->
+RewriteRule ^about?$ about.php [NC, L],// <!-- Rename about.php to about in browser -->
 ErrorDocument 404  /404.php <!-- If user have this error, redirect to this page -->
