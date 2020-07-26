@@ -9,3 +9,7 @@ body{
 .margin800{
 	margin-top: 800px;
 }
+.stats_block{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}

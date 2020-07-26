@@ -9,6 +9,7 @@
   mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);//Correct errors displaying
   $connection = mysqli_connect($host, $user, $password, $database)//Connection to the DB Query
 ?>
+
 <!-- jQuery connection -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Bootstrap JS and CSS Files connection -->
@@ -26,16 +27,6 @@
 <meta name="description" content="">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="shortcut icon" type="img/png" href="img/icon.png">
-
-<!-- Slick connection (don't forget to put SLICK folder into your website folder) -->
-<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-
-<!-- Masonry import (Requires jQuery) -->
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<!-- imagesLoaded import(REQUIRED!!!)(Watch CSS) -->
-<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
 
 <!-- Media queries -->
 <style media="screen">
@@ -58,6 +49,7 @@
 
   }
 </style>
+
 <!-- Стили для placeholder -->
 <style>
 /* Black placeholders */
@@ -72,7 +64,7 @@
   :focus:-ms-input-placeholder      {opacity:0;}/* IE */
 </style>
 
-<!-- Forms and Passwords validation. See .js -->
+<!-- Forms and Passwords validation -->
 <form action="" method="post" name="test" id="form">
   <label for="name">Your name</label>
   <input type="text" name="name" placeholder="Your name" id="name"><br>
@@ -122,6 +114,7 @@ if (fail) {
 }
 }
 </script>
+
 <!-- Cookies Closeable Alert -->
 <script type="text/javascript">
   var removableDiv = document.getElementById("cookieOutside");
@@ -169,6 +162,67 @@ float: right;
   font-weight: normal;
 }
 </style>
+
+<!-- Counter, animates the text when scrolling to it -->
+  <!-- Stats block (Counter) -->
+    <div class="counter bg-dark text-light">
+        <div class="container">
+          <!-- Counter Grid blocks (watch styles) -->
+            <div id="counter" class="stats_block text-center"> <!-- Stats_block = display:grid -->
+              <div>
+                  <h1 class="counter-value number-count" data-count="231">1</h1>
+                  <p>Happy Users</p>
+             </div>
+              <div>
+                 <h1 class="counter-value number-count" data-count="85">1</h1>
+                 <p>Issues Solved</p>
+             </div>
+             <div>
+                 <h1 class="counter-value number-count" data-count="59">1</h1>
+                 <p>Good Reviews</p>
+             </div>
+             <div>
+                 <h1 class="counter-value number-count" data-count="127">1</h1>
+                 <p>Case Studies</p>
+              </div>
+          </div>
+        </div>
+    </div>
+    <!-- Counter script -->
+  <script>
+    $(document).ready(function(){
+      var a = 0;
+  $(window).scroll(function() {
+    if ($('#counter').length) { // checking if CountTo section exists in the page, if not it will not run the script and avoid errors 
+      var oTop = $('#counter').offset().top - window.innerHeight; //get top offset of #COUNTER object
+      if (a == 0 && $(window).scrollTop() > oTop) { //if offset of window at the moment is bigger than #COUNTER's offset, code executes
+      $('.counter-value').each(function() {
+        var $this = $(this),
+        countTo = $this.attr('data-count'); //get the NUMBER from data-count attribute
+        $({
+        countNum: $this.text() //get the NUMBER from counter-value class
+        }).animate({
+          countNum: countTo //Change the counter-value' number to data-count's number
+        },
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+          $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+          $this.text(this.countNum);
+          //alert('finished');
+          }
+        });
+      });
+      a = 1; //Change A to 1 to stop this script from repeating
+      }
+    }
+    });
+    })
+  </script>
+
 <!-- .htaccess settings (Apache settings) -->
 AddDefaultCharset UTF-8
 RewriteRule ^about?$ about.php [NC, L],// <!-- Rename about.php to about in browser -->
