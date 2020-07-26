@@ -1,0 +1,11 @@
+body{
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 4000px;
+	color: white;
+}
+.margin800{
+	margin-top: 800px;
+}
