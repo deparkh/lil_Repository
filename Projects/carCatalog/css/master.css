@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap");
+/*Start of Btrap css styles*/
+.containerNew {
+  max-width: 960px;
+}
+
+/*
+ * Custom translucent site header
+ */
+.site-header {
+  background-color: rgba(0, 0, 0, 0.85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+  color: #999;
+  transition: ease-in-out color 0.15s;
+}
+
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+/*
+ * Extra utilities
+ */
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.flex-equal > * {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/*End of Btrap css styles*/
+.cPointer:hover {
+  cursor: pointer;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  transition: all 0.5s;
+}
+
+a:hover {
+  transition: 0.5s;
+}
+
+p {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 1.2em;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif !important;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif !important;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif !important;
+  font-weight: 400;
+  font-size: 2.1em;
+}
+
+h4 {
+  font-family: "Oswald", sans-serif !important;
+  font-weight: 400;
+}
+
+h6, .h6 {
+  font-family: "Oswald", sans-serif !important;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.bgGray {
+  background-color: #f6f6f6;
+}
+
+.bgDark {
+  background-color: #273848;
+}
+
+.bgLBlue {
+  background-color: #54d3ff;
+}
+
+.colorDark {
+  color: #212529 !important;
+}
+
+.imgBg {
+  height: 100px;
+  clear: both;
+  float: left;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.roundedBlock {
+  border-radius: 15px;
+}
+
+.parentBlock > div:nth-child(3n-3) > div {
+  background-color: white !important;
+  color: #212529 !important;
+}
+.parentBlock > div:nth-child(3n-3) > div a.carHeading {
+  color: #212529 !important;
+}
+.parentBlock > div:nth-child(3n-3) > div > p > a {
+  color: white!important;
+}
+.parentBlock > div:nth-child(3n-2) > div {
+  background-color: #273848 !important;
+}
+.parentBlock > div:nth-child(3n-1) > div {
+  background-color: #007bff !important;
+}
+
+.infoBlock {
+  transition: all 1s;
+}
+.infoBlock:hover {
+  transition: 0.5s;
+  box-shadow: 0 0 20px black;
+}
+
+.mobile {
+  display: none;
+}
+
+.cPurple {
+  color: #d00073;
+}
+
+.filterDiv {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.myFont {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 1.2em;
+}
+
+.wd90 img {
+  width: 96%;
+}
+
+@media (max-width: 1600px) and (min-width: 1401px) {
+  /* Monitors */
+  .fixedHeight {
+    height: 300px;
+  }
+}
+@media (max-width: 1400px) and (min-width: 1201px) {
+  /* Old|Small Laptops */
+  .imgBg {
+    height: 100px;
+  }
+
+  .fixedHeight {
+    height: 300px;
+  }
+}
+@media (max-width: 1200px) and (min-width: 1000px) {
+  /* Small screens|Monitors */
+  .imgBg {
+    height: 100px;
+  }
+}
+@media (max-width: 999px) and (min-width: 651px) {
+  /* Phones in horizontal mode|Tablets */
+  .introText {
+    font-size: 2.7em;
+  }
+
+  .infoBlock:hover {
+    box-shadow: none;
+  }
+
+  .mobile {
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 650px) and (min-width: 350px) {
+  /*iPhone 6|6 Plus  */
+  .roundedBlock {
+    border-radius: 0;
+  }
+
+  .introText {
+    font-size: 3em;
+  }
+
+  .infoBlock:hover {
+    box-shadow: none;
+  }
+
+  .mobile {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .mobMB {
+    margin-bottom: 10px;
+  }
+  .mobMB .btn-primary {
+    margin-bottom: 10px;
+  }
+
+  .imgBg {
+    height: 70px;
+  }
+}
+@media (max-width: 349px) {
+  /*iPhone 4|5 */
+  .roundedBlock {
+    border-radius: 0;
+  }
+
+  .introText {
+    font-size: 2.7em;
+  }
+
+  .infoBlock:hover {
+    box-shadow: none;
+  }
+
+  .mobile {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .mobMB {
+    margin-bottom: 10px;
+  }
+  .mobMB .btn-primary {
+    margin-bottom: 10px;
+  }
+
+  .imgBg {
+    height: 50px;
+  }
+}

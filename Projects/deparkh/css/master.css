@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Wire+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+a{
+  transition: all.6s;
+}
+a:hover{
+  transition: 0.5s;
+  text-decoration: none;
+}
+p{
+  font-weight: 300;
+  font-size: 1.3em;
+  text-transform: none;
+}
+hr{
+  border-top: 1px solid #b3b3b3;
+}
+body{
+  background-color: #ededed;
+}
+.c_pink{
+  color: #d00073;
+}
+#intro_btn{
+  color:white;
+  border: 2px solid white;
+  border-radius: 25%;
+  padding: 5px 30px;
+  transition: all.5s;
+}
+#intro_btn:hover{
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.w_100{
+  width: 100%;
+}
+/* Intro styles */
+.intro_bg{
+  position: relative;
+  z-index: 1;
+  background-color: black;
+}
+.autoplay{
+  opacity: 0.5;
+}
+.intro_{
+  position: absolute;
+  padding-top: 300px;
+  width: 100%;
+  z-index: 2;
+  color: white;
+  font-family: 'Just Another Hand', cursive;
+}
+/* Wrapper styles */
+/* Aside styles */
+/* .fixed{
+  position: fixed;
+} */
+#active {
+  color:#bf3e3a;
+}
+.wrapper{
+  width: 99%;
+  margin-top: 30px;
+  font-family: 'Oswald', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 2em;
+  text-transform: uppercase;
+}
+.company>h3>a{
+  color:#333333;
+  text-transform: none;
+}
+.company>h3>a:hover{
+  color:#bf3e3a;
+  text-decoration: none;
+}
+.company>h6{
+  color:#666;
+  letter-spacing: 5px;
+}
+.list1>ul>li {
+  list-style-type: none;
+}
+.list1>ul>li>h5>a{
+  color:#666;
+  line-height: 1.7em;
+}
+.list1>ul>li>h5>a:hover{
+  color:#bf3e3a;
+}
+
+.list2>ul>li {
+  list-style-type: none;
+}
+.list2>ul>li>h6>a{
+  color:#666;
+  line-height: 1.7em;
+}
+.list2>ul>li>h6>a:hover{
+  color:#bf3e3a;
+}
+/* Main block styles */
+/* About block */
+.about-bg{
+  width: 100%;
+  height: 380px;
+  background-image: url(/img/4.png);
+  background-size: cover;
+  background-position: center bottom;
+  color: white;
+  padding-top: 270px;
+  padding-right: 5px;
+  text-align: right;
+}
+.about_grid{
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-gap: 2em;
+}
+.latestPhotosBlock{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.3em;
+}
+.latestPhotos{
+  width: 100px;
+  height: 100px;
+  background-position: center!important;
+  background-repeat: no-repeat!important;
+  background-size: cover!important; 
+}
+.faqBtn a{
+  color: white;
+}
+.faqBtn a:hover{
+  color: white;
+}
+
+/* Masonry styles (images grid) */
+.grid-sizer{
+  width: 100%;
+}
+.grid-item>a>img {
+  width: 359px;
+  float: left;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 10px 10px;
+  transition: all.6s;
+}
+.grid-item>a>img:hover{
+  opacity:75%;
+  background-color: gray;
+  background-blend-mode: multiply;
+  transition: 0.5s;
+  text-decoration: none;
+}

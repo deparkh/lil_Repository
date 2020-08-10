@@ -1,6 +1,6 @@
 /* Transitions */
 a{
-  transition: all.6s;
+  transition: all 1s;
 }
 a:hover{
   transition: 0.5s;
