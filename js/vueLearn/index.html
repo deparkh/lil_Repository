@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- jQuery connection -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap JS and CSS Files connection -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <!-- CSS connection -->
+  <link rel="stylesheet" href="css/master.css">
+  <!-- Shortcut icon -->
+  <link rel="shortcut icon" type="img/png" href="img/icon.png">
+  <link rel="stylesheet" href="/css/master.css">
+  <!-- VueJS Connection -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <h2>Here I typed div.app with message</h2>
+  <div id="app">
+  {{ message }}
+  </div>
+  <h2>Кроме интерполяции текста, можно также связывать атрибуты элементов:</h2>
+  <div id="app-2">
+  <span v-bind:title="message">
+    Наведи на меня курсор на пару секунд,
+    чтобы увидеть динамически связанное значение title!
+  </span>
+  </div>
+  <h2>Управлять присутствием элемента в DOM тоже довольно просто:</h2>
+  <div id="app-3">
+  <span v-if="seen">Сейчас меня видно</span>
+  </div>
+  <h2>Директива v-for для отображения списков, используя данные из массива:</h2>
+  <div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+  </div>
+  <h2>Чтобы пользователи могли взаимодействовать с вашим приложением, используйте директиву v-on для отслеживания событий, указав метод-обработчик:</h2>
+  <div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Перевернуть сообщение</button>
+  </div>
+  <h2>Vue также предоставляет директиву v-model, позволяющую легко связывать элементы форм и состояние приложения:</h2>
+  <div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message">
+  <!-- V-model was connected to message. Now message value can be changed in script OR in input by the user -->
+  </div>
+  <div id="my1">
+    <p>{{message}}</p>
+  </div>
+  <div id="noapp">
+    <ol>
+  <!-- Создаём экземпляр компонента todo-item -->
+  <li>LOL</li>
+  <todo-item></todo-item>
+</ol>
+  </div>
+  <hr>
+  <h2>Here we start Dudar's lessons</h2>
+  <div id="dapp2">
+    <p>{{title}}</p>
+    <span v-on:mousedown="title='Changed text by mousedown'">Sample text (Click me)</span>
+  </div>
+  <br><br>
+  <div id="dapp1">
+    <p>{{title}}</p>
+    <span v-on:mousedown="changeText">Sample text (Click me)</span>
+    <br><br>
+    <h2>Here we have VUE connection to styles</h2>
+    <p>Color: <span v-bind:style={color:styleCSS}>{{styleCSS}}</span></p>
+    <input type="text" v-on:input="styleCSS=$event.target.value">
+    <br>
+    </div>
+    <br><br>
+    
+    <div id="dapp3">
+      <input type="text" v-on:input="increment($event.target.value)">
+      <p>{{value}}</p>
+      <p>{{doubleValue}}</p>
+    </div>
+    <br>
+    <div id="dapp4">
+      <button v-on:click="show= !show">Toggle visibility</button>
+      <!-- If you write v-show, while element is invisible it will also be in DOM,
+      in this way in will be removed/added -->
+      <p v-if="show">Text that might be invisible (IF)</p>
+      <p v-else="show">Toggled text (ELSE)</p>
+    </div>
+    <br><br>
+    <div id="dapp5">
+      <h2>Arrays</h2>
+      <ul>
+        <!-- car = variable, cars - info from data(in .js) -->
+        <li v-for="car in cars">{{car.model}}, speed = {{car.speed}}</li>
+      </ul>
+    </div>
+    <br><br>
+    <div id="dapp6">
+      <button v-on:click="show= !show">Toggle visibility</button>
+      <!-- If you write v-show, while element is invisible it will also be in DOM,
+      in this way in will be removed/added -->
+      <p v-if="show">Text that might be invisible (IF)</p>
+      <p v-else="show">{{showMess | lowerCase | capitalize}}</p>
+    </div>
+    <br><br>
+    <div id="dapp7">
+      <app-car></app-car>
+    </div>
+    <div id="dapp8">
+    	<div class="btn" :class="{active: isActive, 'btn-secondary': isBtn}">
+    	<!-- you can also use both classes (class AND v-bind:class|:class) -->
+    	<!-- active class will only be accepted to div if 'isActive' = true -->
+    	<!-- if classname have '-' in name, put it in '',f.e. 'kebab-king' -->
+
+    		Active
+    	</div>
+    </div>
+    <br><br>
+    <div id="dapp9">
+    	<button @click="high" class="btn btn-secondary">You clicked me {{counter}} times</button>
+    	<!-- Couner is 3 because of 'created' part of cycle -->
+    </div>
+<script type="text/javascript" src="js/vuescript.js"></script>
+</body>
+</html>
