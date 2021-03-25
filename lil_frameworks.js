@@ -42,3 +42,19 @@
     return false;
   }
 </script>
+// Change header bg when scrolling
+var navbar = document.getElementById("navbar");
+          // Default bg of the navbar should be transparent
+          document.onscroll = function() {
+            if (window.pageYOffset  >= 1) {
+              // Add class that make it black
+              navbar.classList.add("bg--dark")
+            } else {
+              // Remove Style to make nav transparent
+              navbar.classList.remove("bg--dark");
+            }
+}
+// Toggle class when clicked
+function showMenu() {
+             $(".navbar").toggleClass("bg--dark");
+          }
