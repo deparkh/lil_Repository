@@ -58,3 +58,6 @@ var navbar = document.getElementById("navbar");
 function showMenu() {
              $(".navbar").toggleClass("bg--dark");
           }
+//jQuery into React
+// npm i jquery
+// 
