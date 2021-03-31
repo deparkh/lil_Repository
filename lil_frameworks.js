@@ -60,4 +60,36 @@ function showMenu() {
           }
 //jQuery into React
 // npm i jquery
-// 
+
+// Counter function
+$(document).ready(function(){
+      var a = 0;
+  $(window).scroll(function() {
+    if ($('#counter').length) { // checking if CountTo section exists in the page, if not it will not run the script and avoid errors 
+      var oTop = $('#counter').offset().top - window.innerHeight; //get top offset of #COUNTER object
+      if (a == 0 && $(window).scrollTop() > oTop) { //if offset of window at the moment is bigger than #COUNTER's offset, code executes
+      $('.counter-value').each(function() {
+        var $this = $(this),
+        countTo = $this.attr('data-count'); //get the NUMBER from data-count attribute
+        $({
+        countNum: $this.text() //get the NUMBER from counter-value class
+        }).animate({
+          countNum: countTo //Change the counter-value' number to data-count's number
+        },
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+          $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+          $this.text(this.countNum);
+          //alert('finished');
+          }
+        });
+      });
+      a = 1; //Change A to 1 to stop this script from repeating
+      }
+    }
+    });
+    })
