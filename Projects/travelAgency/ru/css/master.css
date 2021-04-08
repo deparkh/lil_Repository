@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background: url(/img/georgia3.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+a{
+  color: black;
+  transition: 0.2s all ease-out;
+}
+a:hover{
+  text-decoration: none;
+  color: #b70d0d;
+  transition: 0.2s all ease-out;
+}
+.bg--dark{
+  background-color: rgb(112, 191, 98, 0.8);;
+  transition: 0.3s all ease-out;
+ 
+}
+.navbar{
+  transition: 0.3s all ease-out;
+}
+.navbar-logo{
+  color: white;
+  font-size: 2em;
+  padding-left: 40px;
+  padding: 10px;
+}
+.navbar-logo:hover{
+  color: white;
+  text-decoration: none;
+}
+.nav-link{
+  font-size: 1.3em;
+}
+.tra-orange{
+  color: #b70d0d;
+}
+.navbar-toggler-icon {
+    background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    color: rgba(255,255,255,.5);
+}
+.start{
+  opacity: 0.9;
+}
+.start>div{
+  color: white;
+  margin-top: 20%;
+  text-align: center;
+}
+.whyBlock{
+  margin-top: 24%;
+  background-color: #f5f6f6;
+  text-align: center;
+}
+.aboutBlock{
+  background-color: #fff;
+}
+.text-sans{
+  font-family: 'Work Sans', sans-serif;
+}
+.text-play{
+  font-family: 'Playfair Display', serif;
+}
+.lst-none>li{
+  list-style-type: none;
+}
+.noEase{
+  transition: none;
+}
+.traBg{
+  background-color: #b70d0d;
+}
+.traBg:hover{
+  background-color: #a9a39e;
+}
+.cardsBlock{
+  background-color: #f5f6f6;
+}
+.bg--gray{
+  background-color: #f5f6f8;
+}
+.mapBlock{
+  background-color: #fff;
+}
+.counterBlock{
+  background-color: #f5f6f8;
+  width: 97%;
+  margin: auto;
+  margin-top: 200px;
+  box-shadow: 0px 0px 40px 10px rgb(0 0 0 / 10%);
+}
+.reviewBlock{
+  background-color: #f5f6f8;
+}
+.reviewImg{
+  width: 20%;
+  border-radius: 50%;
+}
+.finishBlock{
+  background: url(/img/georgia2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.finishBlock>.container{
+  padding: 13%;
+  text-align: center;
+}
+footer{
+  margin-top: 5px;
+  background-color:rgb(112, 191, 98, 0.8);
+  color: white;
+  height: 75px;
+}
+.card{
+  transition: 0.3s
+}
+.card:hover{
+  transform: scale(1.05);
+  transition: 0.3s;
+  color:#a9a39e;
+}
+.artStart{
+  margin-top: 22%;
+  text-align: center;
+}

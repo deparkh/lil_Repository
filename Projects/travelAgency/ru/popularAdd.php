@@ -1,0 +1,3 @@
+<?header("Location:editor.php");
+require_once'config.php';
+ mysqli_query($connection, "INSERT INTO `popularblock` (`id`, `popularImgSrc`, `popularHeading`, `popularDuration`, `popularLocation`, `popularText`, `popularTextBig`, `popularPrice`) VALUES (NULL, '".$_POST['img']."', '".$_POST['head']."', '".$_POST['time']."', '".$_POST['location']."', '".$_POST['textSm']."', '".$_POST['textLg']."', '".$_POST['price']."');");
