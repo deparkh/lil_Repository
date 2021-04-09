@@ -226,3 +226,11 @@ float: right;
 AddDefaultCharset UTF-8
 RewriteRule ^about?$ about.php [NC, L],// <!-- Rename about.php to about in browser -->
 ErrorDocument 404  /404.php <!-- If user have this error, redirect to this page -->
+php_value short_open_tag 1 <!-- Make short tags like <? ?> instead of <?php ?> work -->
+
+<!-- composer.json -->
+{
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
+}
